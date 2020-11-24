@@ -1,0 +1,16 @@
+{
+  "name": "nodejsautomatedsdlc",
+  "version": "1.0.0",
+  "description": "Sample app to test automated process",
+  "main": "index.js",
+  "scripts": {
+    "test": "node scripts/test.js",
+    "build": "node scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/NodeJSAutomatedSDLC"
+  },
+  "author": "",
+  "license": "ISC"
+}
