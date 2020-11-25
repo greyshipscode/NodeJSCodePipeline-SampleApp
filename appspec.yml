@@ -2,21 +2,25 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/nodejs
+    destination: /srv/nodejs
 
 hooks:
   ApplicationStop:
     - location: deploy/ApplicationStop.sh
       timeout: 10
+      runas: root
 
   AfterInstall:
     - location: deploy/AfterInstall.sh
       timeout: 1200
+      runas: root
 
   ApplicationStart:
     - location: deploy/ApplicationStart.sh
       timeout: 60
+      runas: root
 
   ValidateService:
     - location: deploy/ValidateService.sh
       timeout: 10
+      runas: root
