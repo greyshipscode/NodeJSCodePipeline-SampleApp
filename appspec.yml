@@ -4,29 +4,23 @@ files:
   - source: /
     destination: /srv/nodejs
 
-permissions:
-  - object: /
-    pattern: "**"
-    owner: ec2-user
-    group: ec2-user
-
 hooks:
   ApplicationStop:
-    - location: /srv/nodejs/deploy/ApplicationStop.sh
+    - location: deploy/ApplicationStop.sh
       timeout: 10
       runas: ec2-user
 
   AfterInstall:
-    - location: /srv/nodejs/deploy/AfterInstall.sh
+    - location: deploy/AfterInstall.sh
       timeout: 1200
       runas: ec2-user
 
   ApplicationStart:
-    - location: /srv/nodejs/deploy/ApplicationStart.sh
+    - location: deploy/ApplicationStart.sh
       timeout: 60
       runas: ec2-user
 
   ValidateService:
-    - location: /srv/nodejs/deploy/ValidateService.sh
+    - location: deploy/ValidateService.sh
       timeout: 10
       runas: ec2-user
