@@ -8,19 +8,15 @@ hooks:
   ApplicationStop:
     - location: deploy/ApplicationStop.sh
       timeout: 10
-      runas: ec2-user
 
   AfterInstall:
     - location: deploy/AfterInstall.sh
       timeout: 1200
-      runas: ec2-user
 
   ApplicationStart:
     - location: deploy/ApplicationStart.sh
       timeout: 60
-      runas: ec2-user
 
   ValidateService:
     - location: deploy/ValidateService.sh
       timeout: 10
-      runas: ec2-user
