@@ -5,6 +5,11 @@ files:
     destination: /srv/nodejs
 
 hooks:
+  ApplicationStop:
+    - location: deploy/ApplicationStop.sh
+      timeout: 10
+      runas: root
+
   AfterInstall:
     - location: deploy/AfterInstall.sh
       timeout: 1200
