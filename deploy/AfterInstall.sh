@@ -1,5 +1,5 @@
 #!/bin/bash
-
+touch /etc/systemd/system/node-app.service
 echo "[Unit]
 Description=ROT13 demo service
 After=network.target
@@ -12,4 +12,4 @@ User=ec2-user
 ExecStart=/srv/nodejs/node-app
 
 [Install]
-WantedBy=multi-user.target" >> /etc/systemd/system/node-app.service
+WantedBy=multi-user.target" > /etc/systemd/system/node-app.service
