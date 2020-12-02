@@ -1,14 +1,14 @@
 #!/bin/bash
 touch /etc/systemd/system/node-app.service
 echo "[Unit]
-Description=ROT13 demo service
+Description=NodeJS Web Service
 After=network.target
 StartLimitIntervalSec=0
 [Service]
 Type=simple
 Restart=always
 RestartSec=1
-User=ec2-user
+User=root
 ExecStart=/srv/nodejs/node-app
 
 [Install]
