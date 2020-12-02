@@ -22,5 +22,5 @@ hooks:
 
   ValidateService:
     - location: deploy/ValidateService.sh
-      timeout: 10
+      timeout: 20
       runas: root
