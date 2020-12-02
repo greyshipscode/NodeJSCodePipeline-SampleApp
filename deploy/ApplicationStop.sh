@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Stopping Application..."
-killall node-app
+systemctl stop node-app

@@ -1,4 +1,3 @@
 #!/bin/bash
-echo "Starting Application..."
-../node-app &
-
+systemctl start node-app
+systemctl enable node-app
