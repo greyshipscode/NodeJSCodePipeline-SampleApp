@@ -21,7 +21,7 @@ hooks:
       runas: root
 
   ApplicationStart:
-    - location: node-app
+    - location: deploy/ApplicationStart.sh
       timeout: 60
       runas: root
 
